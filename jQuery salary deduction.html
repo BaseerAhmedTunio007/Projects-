@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ <style>
+  .move{
+    margin-left: 30px;
+    text-align: center;
+    transition: 2s;
+    padding: 20px;
+    border: 2px solid greenyellow;
+    /* background-image: url(""); */
+  }
+  input{
+      margin-bottom: 20px;
+  }
+ </style>
+
+</head>
+<body>
+  <!-- my html form  -->
+  <div></div>
+   <form action="">
+    <div>
+    <input type="number" name="" id="salary" placeholder="Enter Your Salary">
+    </div>
+    <div>
+    <input type="number" name="" id="tax" placeholder="Enter text deduction">
+  </div>
+    <button id="calc">Calculate</button>
+   </form>
+  </div>
+   <hr>
+   <h3 >  </h3>
+
+
+
+
+
+
+
+
+
+  <!-- my jaquery cdn  -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+    $("form").submit(function (e) { 
+      e.preventDefault();
+      salaryValue = $('#salary').val()
+      textValue = $('#tax').val()
+
+      netValue = Number(salaryValue) - Number(textValue) 
+      $("h3").text("This value is " + netValue)
+      
+    });
+
+    $("#calc").click(function(){
+      $("h3").css("text-align" , "center")
+      $("form").css("background-color" , "blue")
+      $("form").toggleClass("move")
+
+      $("h3").css("background-color","red")
+      $()
+      $("h3").toggleClass("move")
+    })
+  </script>
+
+
+</body>
+</html>
